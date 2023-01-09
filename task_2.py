@@ -1,7 +1,9 @@
 def unique(data):
-    result = []
+    result = set()
+    result_list = []
     for i in range(len(data)):
         if data[i] not in result:
-            result.append(data[i])
+            result_list.append(data[i])
+            result.add(data[i])
 
-    return result
+    return result_list
