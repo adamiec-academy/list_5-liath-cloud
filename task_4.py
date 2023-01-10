@@ -6,6 +6,7 @@ def reversed_words():
     for line in open("words.txt", encoding="utf-8"):
         data.append(line.strip('\n'))
 
+    data = sorted(data)
     data_krotka = set(data)
 
     for i in range(len(data)):
