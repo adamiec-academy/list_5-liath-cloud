@@ -12,6 +12,7 @@ def reversed_words():
         data_inverse = data[i][::-1]
         if data_inverse in data_krotka and data_inverse != data[i]:
             results.append((data[i], data_inverse))
+            data_krotka.remove(data_inverse)
 
     results = sorted(results)
     return results
