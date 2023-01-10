@@ -15,6 +15,7 @@ def reversed_words():
         if data_inverse in data_krotka and data_inverse != data[i] and (data_inverse, data[i]) not in results_krotka:
             results.append((data[i], data_inverse))
             results_krotka.add((data[i], data_inverse))
+            data_krotka.remove(data_inverse)
 
     results = sorted(results)
     return results
